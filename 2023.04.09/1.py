@@ -1,11 +1,11 @@
 # УДАЛИТЬ: в Python не используется точка с запятой для обозначения окончания логической линии
-name = input('Введите имя: ');
-secname = input('Введите фамилию: ');
-date_birth = input('Введите дату вашего рождения: ');
+name = input('Введите имя: ')
+secname = input('Введите фамилию: ')
+date_birth = input('Введите дату вашего рождения: ')
 
-age = 2023 - int(date_birth);
+age = 2023 - int(date_birth)
 
-print(secname + " " + name + ",", age);
+print(secname + " " + name + ",", age)
 
 
 # ИТОГ: отлично — 3/3
