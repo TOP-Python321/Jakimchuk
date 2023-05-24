@@ -8,3 +8,9 @@ for i in range(len(text)):
         total_price += price
 
 print(f'{total_price // 100} руб. {total_price % 100} коп.')
+
+
+# ДОБАВИТЬ: результат выполнения своего кода!
+
+
+# ИТОГ: хорошо — 2/3
