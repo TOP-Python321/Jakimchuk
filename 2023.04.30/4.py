@@ -2,7 +2,6 @@ errors = {}
 
 while True:
     user_input = input("Введите код ошибки и значение: ").split()
-
     if len(user_input) > 1:
         input_errors = {user_input[0]: user_input[1]}
         errors |= input_errors
@@ -16,6 +15,7 @@ while True:
         print("! value error !")
         break   
 
+
 # Введите код ошибки и значение: 4107 ER_SRS_UNUSED_PROJ_PARAMETER_PRESENT
 # Введите код ошибки и значение: 4108 ER_GIPK_COLUMN_EXISTS
 # Введите код ошибки и значение: 4111 ER_DROP_PK_COLUMN_TO_DROP_GIPK
@@ -28,3 +28,5 @@ while True:
 # Введите код ошибки и значение: 1010 ER_DB_DROP_RMDIR
 # Введите код ошибки и значение: ER_DB_DROP_RMDIR
 # 1010
+
+

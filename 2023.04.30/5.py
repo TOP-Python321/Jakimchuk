@@ -12,8 +12,15 @@ dictionary = {
 inp = input('Введите слово: ').upper().replace('Ё', 'Е')
 
 points = 0
+print(sum(
+    points + k
+    # ПЕРЕИМЕНОВАТЬ: имена переменных i, j, k традиционно используются только для индексов
+    for i in inp for k, v in dictionary.items()
+    if i in v
+))
 
-print(sum(points + k for i in inp for k, v in dictionary.items() if i in v))
 
 # Введите слово: синхрофазотрон
 # 29
+
+

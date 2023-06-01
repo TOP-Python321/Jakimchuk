@@ -31,16 +31,22 @@ list_of_cities = [
     },
 ]
 
-list_concatenation = {}
-
+dict_merged = {}
 for dicts in list_of_cities:
     for k, v in dicts.items():
-        if k in list_concatenation:
-            list_concatenation[k] |= {v}
+        if k in dict_merged:
+            dict_merged[k] |= {v}
         else:
-            list_concatenation[k] = {v}
+            dict_merged[k] = {v}
 
-print(*{f'{k!r}: {v}' for k, v in list_concatenation.items()}, sep=',\n')
+print(
+    *{
+        f'{k!r}: {v}'
+        for k, v in dict_merged.items()
+    },
+    sep=',\n'
+)
+
 
 # 'Самара': {2},
 # 'Барнаул': {5},
@@ -59,3 +65,5 @@ print(*{f'{k!r}: {v}' for k, v in list_concatenation.items()}, sep=',\n')
 # 'Ульяновск': {4, 7},
 # 'Новосибирск': {7},
 # 'Санкт-Петербург': {4, 6}
+
+
