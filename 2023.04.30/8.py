@@ -1,3 +1,4 @@
+# ИСПРАВИТЬ: использование replace() избыточно, можно выполнять разбивку по нужной подстроке передачей аргумента в split()
 files = input('Введите названия файлов через точку с запятой: ').replace('; ', ' ').split()
 
 files_list = []
@@ -8,9 +9,9 @@ for f in files:
     if files_dict[f] == 1:
         files_list.append(f)
     else:
+        # ИСПРАВИТЬ: метод find() вызывается лишний раз — оптимизируйте
         files_list.append(f[:f.find('.')] + '_' + str(files_dict[f]) + f[f.find('.'):])
-    
-        
+
 print(*sorted(files_list), sep='\n')
 
 
@@ -27,3 +28,4 @@ print(*sorted(files_list), sep='\n')
 # src_2.tar.gz
 
 
+# ИТОГ: хорошо, требуется доработать — 3/5
